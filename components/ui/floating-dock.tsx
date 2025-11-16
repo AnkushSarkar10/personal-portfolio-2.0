@@ -23,6 +23,7 @@ export const FloatingDock = ({
         icon: React.ReactNode;
         href: string;
         isActive?: boolean;
+        onClick?: () => void;
     }[];
     desktopClassName?: string;
     mobileClassName?: string;
@@ -44,6 +45,7 @@ const FloatingDockMobile = ({
         icon: React.ReactNode;
         href: string;
         isActive?: boolean;
+        onClick?: () => void;
     }[];
     className?: string;
 }) => {
@@ -87,6 +89,7 @@ const FloatingDockMobile = ({
                                         e.preventDefault();
                                         setActiveItem(item.title);
                                         setOpen(false);
+                                        item.onClick?.();
                                     }}
                                 >
                                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-background-secondary">
@@ -128,6 +131,7 @@ const FloatingDockDesktop = ({
         icon: React.ReactNode;
         href: string;
         isActive?: boolean;
+        onClick?: () => void;
     }[];
     className?: string;
 }) => {
@@ -154,7 +158,10 @@ const FloatingDockDesktop = ({
                         key={item.title}
                         {...item}
                         isActive={activeItem === item.title}
-                        onClick={() => setActiveItem(item.title)}
+                        onClick={() => {
+                            setActiveItem(item.title);
+                            item.onClick?.();
+                        }}
                     />
                 ))}
             </div>
