@@ -15,12 +15,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import ProjectCard from "@/components/project-card";
+import ColourfulText from "@/components/ui/colourful-text";
 
 export default function Home() {
     const [activePage, setActivePage] = useState<"home" | "work">("home");
 
     return (
-        <main className="flex flex-col max-w-screen overflow-x-hidden min-h-screen text-white bg-background relative">
+        <main className="flex flex-col w-screen h-screen overflow-hidden text-white bg-background relative">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-size-[20px_20px] opacity-20"></div>
             <Spotlight />
@@ -110,23 +111,23 @@ function Work() {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen gap-8 relative px-52 pt-32 pb-32 z-50">
-            <h1 className="text-4xl font-momo-trust-display">Work</h1>
-            <div className="flex flex-row gap-8">
-                <div className="flex flex-col w-1/2">
-                    <p className="text-lg font-normal text-gray-400 pr-20">
-                        I&apos;m Ankush Sarkar, a fourth-year Computer Science
+        <div className="flex flex-col h-full w-full gap-6 relative px-52 pt-24 pb-24 z-50 overflow-hidden">
+            <h1 className="text-4xl font-momo-trust-display shrink-0">Work</h1>
+            <div className="flex flex-row gap-8 h-full overflow-hidden">
+                <div className="flex flex-col w-1/3 overflow-hidden">
+                    <p className="text-xl font-normal text-gray-400">
+                        I&apos;m Ankush Sarkar, a fifth-year Computer Science
                         student at McMaster University. I previously worked as a
                         software developer intern at Hitachi Rail, where I built
-                        features for production systems and learned a lot from
-                        working with experienced teams. I focus mainly on
-                        TypeScript across both web and mobile, and I enjoy
-                        writing clean, understandable code and tackling tricky
-                        technical problems.
+                        features for software for autonomous trains used by
+                        train operators. <br/> I focus mainly on{" "} 
+                        <ColourfulText text="TypeScript" /> across both web and
+                        mobile. I enjoy writing clean, understandable code and
+                        tackling tricky technical problems.
                     </p>
                 </div>
-                <div className="flex flex-col w-1/2">
-                    <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col w-2/3 overflow-hidden">
+                    <div className="grid grid-cols-2 gap-3 h-full overflow-hidden">
                         {projects.map((project, index) => (
                             <ProjectCard
                                 key={index}

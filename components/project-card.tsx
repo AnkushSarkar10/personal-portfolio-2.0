@@ -19,11 +19,11 @@ export default function ProjectCard({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="max-w-xs w-full group/card"
+            className="w-full h-full group/card"
         >
             <div
                 className={cn(
-                    "cursor-pointer overflow-hidden relative card h-52 rounded-md shadow-xl max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
+                    "cursor-pointer overflow-hidden relative card h-52 w-full rounded-md shadow-xl backgroundImage flex flex-col justify-between p-4",
                     "bg-cover bg-center"
                 )}
                 style={{ backgroundImage: `url(${picUrl})` }}
