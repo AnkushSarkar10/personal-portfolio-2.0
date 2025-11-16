@@ -189,22 +189,22 @@ function IconContainer({
     });
 
     // macOS dock scaling: icons scale up more subtly (80px base)
-    const widthTransform = useTransform(distance, [-150, 0, 150], [75, 75, 75]);
+    const widthTransform = useTransform(distance, [-150, 0, 150], [75, 90, 75]);
     const heightTransform = useTransform(
         distance,
         [-150, 0, 150],
-        [70, 70, 70]
+        [60, 60, 60]
     );
 
     const widthTransformIcon = useTransform(
         distance,
         [-150, 0, 150],
-        [40, 52, 40]
+        [32, 46, 32]
     );
     const heightTransformIcon = useTransform(
         distance,
         [-150, 0, 150],
-        [40, 52, 40]
+        [32, 46, 32]
     );
 
     const width = useSpring(widthTransform, {
