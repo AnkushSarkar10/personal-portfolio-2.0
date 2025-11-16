@@ -120,8 +120,8 @@ function Work() {
                         student at McMaster University. I previously worked as a
                         software developer intern at Hitachi Rail, where I built
                         features for software for autonomous trains used by
-                        train operators. <br/> I focus mainly on{" "} 
-                        <ColourfulText text="TypeScript" /> across both web and
+                        train operators. <br/> <br/> I focus mainly on{" "} 
+                        <span className="font-bold">TypeScript</span> across both web and
                         mobile. I enjoy writing clean, understandable code and
                         tackling tricky technical problems.
                     </p>
