@@ -23,7 +23,7 @@ export const FloatingDock = ({
         icon: React.ReactNode;
         href: string;
         isActive?: boolean;
-        onClick?: () => void;
+        onClick?: (event?: React.MouseEvent) => void;
     }[];
     desktopClassName?: string;
     mobileClassName?: string;
@@ -131,7 +131,7 @@ const FloatingDockDesktop = ({
         icon: React.ReactNode;
         href: string;
         isActive?: boolean;
-        onClick?: () => void;
+        onClick?: (event?: React.MouseEvent) => void;
     }[];
     className?: string;
 }) => {
@@ -142,6 +142,7 @@ const FloatingDockDesktop = ({
 
     return (
         <motion.div
+            data-dock-container
             onMouseMove={(e) => mouseX.set(e.pageX)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
@@ -158,9 +159,9 @@ const FloatingDockDesktop = ({
                         key={item.title}
                         {...item}
                         isActive={activeItem === item.title}
-                        onClick={() => {
+                        onClick={(event) => {
                             setActiveItem(item.title);
-                            item.onClick?.();
+                            item.onClick?.(event);
                         }}
                     />
                 ))}
@@ -182,7 +183,7 @@ function IconContainer({
     icon: React.ReactNode;
     href: string;
     isActive?: boolean;
-    onClick?: () => void;
+    onClick?: (event?: React.MouseEvent) => void;
 }) {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -241,10 +242,11 @@ function IconContainer({
     return (
         <a
             href={href}
+            data-icon-title={title}
             className="relative flex items-end"
             onClick={(e) => {
                 e.preventDefault();
-                onClick?.();
+                onClick?.(e);
             }}
         >
             <motion.div
