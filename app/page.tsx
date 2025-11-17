@@ -62,7 +62,7 @@ export default function Home() {
                 }}
                 activePage={activePage}
             />
-            <div className="fixed bottom-8 right-8 text-sm text-gray-600 z-40">
+            <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 text-xs md:text-sm text-gray-600 z-40">
                 ©️ 2025 Ankush Sarkar
             </div>
         </main>
@@ -71,20 +71,24 @@ export default function Home() {
 
 function LandingPage() {
     return (
-        <div className="flex flex-col h-full items-center justify-center gap-8 relative">
-            <h1 className="text-7xl font-momo-trust-display">Ankush Sarkar</h1>
+        <div className="flex flex-col h-full items-center justify-center gap-4 md:gap-8 relative px-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-momo-trust-display text-center">
+                Ankush Sarkar
+            </h1>
             <div className="flex flex-col items-center justify-center gap-2">
-                <p className="text-3xl text-gray-400">Software developer</p>
-                <p className="text-lg text-gray-400">
+                <p className="text-xl md:text-2xl lg:text-3xl text-gray-400 text-center">
+                    Software developer
+                </p>
+                <p className="text-base md:text-lg text-gray-400 text-center">
                     prev intern @ Hitachi Rails
                 </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 mt-4">
-                <div className="flex items-center gap-3 text-xl text-gray-400">
-                    <IconMail className="h-6 w-6" />
+                <div className="flex items-center gap-2 md:gap-3 text-base md:text-xl text-gray-400">
+                    <IconMail className="h-5 w-5 md:h-6 md:w-6" />
                     <a
                         href="mailto:ankush.sarkar2002@gmail.com"
-                        className="hover:text-white transition-colors text-sm"
+                        className="hover:text-white transition-colors text-xs md:text-sm break-all"
                     >
                         ankush.sarkar2002@gmail.com
                     </a>
@@ -123,7 +127,8 @@ function Work() {
         },
         {
             title: "Family Tree Visualizer",
-            description: "A fullstack family tree Visualiser built using Nuxt JS, Supabase and d3-org-chart.",
+            description:
+                "A fullstack family tree Visualiser built using Nuxt JS, Supabase and d3-org-chart.",
             link: "https://familivistas.vercel.app",
             picUrl: "/project/famtree.png",
         },
@@ -151,11 +156,13 @@ function Work() {
     ];
 
     return (
-        <div className="flex flex-col h-full w-full gap-6 relative px-52 pt-24 pb-24 overflow-hidden">
-            <h1 className="text-4xl font-momo-trust-display shrink-0">Work</h1>
-            <div className="flex flex-row gap-8 h-full overflow-hidden">
-                <div className="flex flex-col w-1/3 overflow-hidden">
-                    <p className="text-xl font-normal text-gray-400">
+        <div className="flex flex-col h-full w-full gap-6 relative px-12 pt-12 md:px-52 md:pt-24 pb-24 overflow-hidden">
+            <h1 className="text-3xl md:text-4xl font-momo-trust-display shrink-0">
+                Work
+            </h1>
+            <div className="flex flex-col md:flex-row gap-8 h-full overflow-hidden">
+                <div className="flex flex-col w-full md:w-1/3 overflow-hidden">
+                    <p className="text-base md:text-xl font-normal text-gray-400">
                         I&apos;m Ankush Sarkar, a fifth-year Computer Science
                         student at McMaster University. I previously worked as a
                         software developer intern at Hitachi Rail, where I built
@@ -167,7 +174,7 @@ function Work() {
                         problems.
                     </p>
                 </div>
-                <div className="flex flex-col w-2/3 overflow-hidden">
+                <div className="hidden md:flex flex-col w-2/3 overflow-hidden">
                     <div className="grid grid-cols-2 gap-3 h-full overflow-hidden">
                         {projects.map((project, index) => (
                             <ProjectCard
@@ -187,7 +194,7 @@ function Work() {
 
 function ResumePage() {
     return (
-        <div className="flex flex-col h-full w-full relative px-32 pt-8 pb-32 overflow-hidden">
+        <div className="flex flex-col h-full w-full relative px-4 md:px-32 pt-8 pb-46 md:pb-32 overflow-hidden">
             <div className="flex items-center justify-end mb-4 shrink-0">
                 <Button
                     variant="ghost"
@@ -327,7 +334,7 @@ function MacNavBar({
         },
     ];
     return (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <div className="fixed bottom-12 md:bottom-8 left-1/2 -translate-x-1/2 z-50">
             <FloatingDock items={links} />
         </div>
     );
