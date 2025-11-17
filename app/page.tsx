@@ -108,40 +108,45 @@ function LandingPage() {
 function Work() {
     const projects = [
         {
-            title: "Project 1",
-            description: "A description of project 1",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Bill Splitting app",
+            description:
+                "A bill splitting app built with React Native and TypeScript.",
+            link: "https://github.com/mac-capstone/Capstone-Project",
+            picUrl: "/project/bill-splitting.png",
         },
         {
-            title: "Project 2",
-            description: "A description of project 2",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Habits Together",
+            description:
+                "A app for habit tracking with friends, built with React Native and TypeScript.",
+            link: "https://habitstogether.app/",
+            picUrl: "/project/habitstogether.jpeg",
         },
         {
-            title: "Project 3",
-            description: "A description of project 3",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Family Tree Visualizer",
+            description: "A fullstack family tree Visualiser built using Nuxt JS, Supabase and d3-org-chart.",
+            link: "https://familivistas.vercel.app",
+            picUrl: "/project/famtree.png",
         },
         {
-            title: "Project 4",
-            description: "A description of project 4",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Audio Visualizer",
+            description:
+                "A 3D audio visualzer built using Three js and  Nuxt js.",
+            link: "https://audio-visualizer-threejs.netlify.app/",
+            picUrl: "/project/audioviz.png",
         },
         {
-            title: "Project 5",
-            description: "A description of project 5",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Multiplayer Tic Tac Toe",
+            description:
+                "An online multiplayer Tic Tac Toe, built using vue js and flask-socketio.",
+            link: "https://vue-flask-tic-tac-toe.web.app/",
+            picUrl: "/project/tictactoe.png",
         },
         {
-            title: "Project 6",
-            description: "A description of project 6",
-            link: "https://example.com",
-            picUrl: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
+            title: "Sorting Algorithm Visualizer",
+            description:
+                "A web app for visualizing various sorting algorithms. Built using Nuxt js and DaisyUi.",
+            link: "https://sorting-algo-visualiser.netlify.app",
+            picUrl: "/project/sortingalgovis.png",
         },
     ];
 

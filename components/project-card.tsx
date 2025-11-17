@@ -23,14 +23,14 @@ export default function ProjectCard({
         >
             <div
                 className={cn(
-                    "cursor-pointer overflow-hidden relative card h-52 w-full rounded-md shadow-xl backgroundImage flex flex-col justify-between p-4",
+                    "cursor-pointer overflow-hidden relative card h-52 w-full rounded-md shadow-xl flex flex-col justify-between p-4",
                     "bg-cover bg-center"
                 )}
                 style={{ backgroundImage: `url(${picUrl})` }}
             >
-                <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+                <div className="absolute w-full h-full top-0 left-0 transition duration-300 bg-gray-900 group-hover/card:bg-black opacity-60"></div>
                 <div className="text content relative z-10 mt-auto">
-                    <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                    <h1 className="font-momo-trust-display text-xl md:text-2xl text-gray-50 relative z-10">
                         {title}
                     </h1>
                     <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
